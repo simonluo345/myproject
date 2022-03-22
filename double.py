@@ -1,20 +1,22 @@
 def doubler(func):
     def wrapper(*args, **kwargs):
         print("A")
-        val = func(*args, **kwargs)
+        func(*args, **kwargs)
         print('B')
-        return val
+        
+
     return wrapper
 
 
 @doubler
-def f(a, b=9):
+def func1(a, b):
     print(a, b)
 
 
 @doubler
-def add(x, y):
-    return x + y
+def func2(x, y):
+    print(x, y)
 
-print(add(2,3))
+func1(2,3)
+
 

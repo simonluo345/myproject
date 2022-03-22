@@ -9,14 +9,9 @@ def doubler(func):
 
 
 @doubler
-def func1(a, b):
-    print(a, b)
+def func1(a):
+    print(a)
 
-
-@doubler
-def func2(x):
-    print(x)
-
-func1(2,3)
+func1(2)
 
 

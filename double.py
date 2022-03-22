@@ -1,4 +1,4 @@
-def double(func):
+def doubler(func):
     def wrapper(*args, **kwargs):
         print("A")
         val = func(*args, **kwargs)
@@ -7,12 +7,12 @@ def double(func):
     return wrapper
 
 
-@double
+@doubler
 def f(a, b=9):
     print(a, b)
 
 
-@double
+@doubler
 def add(x, y):
     return x + y
 

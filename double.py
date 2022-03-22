@@ -14,9 +14,9 @@ def func1(a, b):
 
 
 @doubler
-def func2(x, y):
-    print(x, y)
+def func2(x):
+    print(x)
 
-func1(2,3)
+func2(2)
 
 

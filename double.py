@@ -5,7 +5,6 @@ def doubler(func):
         func(*args, **kwargs)
         print('B')
         
-
     return wrapper
 
 
@@ -18,6 +17,6 @@ def func1(a, b):
 def func2(x):
     print(x)
 
-func2(2)
+func1(2,3)
 
 

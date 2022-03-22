@@ -18,5 +18,5 @@ def func2(x):
     print(x)
 
 func2(2)
-
+func1(3, 5)
 

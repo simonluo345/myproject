@@ -13,6 +13,7 @@ with open("document.txt") as infile:
     d = dict(mostcommon)
     r = sorted(d.items(), key=lambda x: (-x[1], x[0]))
 
+print()
 for x,y in r:
     print(x, end=': ')
     print(y)

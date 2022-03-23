@@ -5,8 +5,7 @@ def doubler(func):
         
     return wrapper
 
-
-@doubler
+@doubler #the same as func1 = doubler(func1)
 def func1(a):
     print(a)
 

@@ -1,9 +1,7 @@
 def doubler(func):
     def wrapper(*args, **kwargs):
-        print("A")
         func(*args, **kwargs)
         func(*args, **kwargs)
-        print('B')
         
     return wrapper
 

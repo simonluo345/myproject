@@ -1,0 +1,26 @@
+
+<html>
+<head>
+    <title> {% block title %} {% endblock %} </title>
+</head>
+<body>
+
+    <ul>{% with messages = get_flashed_messages() %}
+        {% for i in range(messages|length) %}
+                <li>{{ messages[i] }}</li>
+        {% endfor %}
+        {% endwith %}
+    </ul>
+    <h1> Welcome {{ name }} </h1>
+    <a href="www.google.com"> not google </a>
+    <ul> {% for i in range(city|length) %}
+         <li> {{ city[i] }} </li>
+         {% endfor %}
+    </ul>
+    <form action="#" method="post">
+        <p><input type="text" name="nm" /></p>
+        <p><input type="submit" value="submit"/></p>
+    </form>
+
+</body>
+</html>

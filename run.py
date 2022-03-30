@@ -1,5 +1,5 @@
-from app import myapp
+from app import myobj
 
 
 if __name__ == "__main__":
-    myapp.run()
+    myobj.run()

@@ -10,10 +10,13 @@ class LoginForm(FlaskForm):
     submit = SubmitField('Submit')
 
 
+city_names = ["Paris", "London", "Rome", "Tahiti"]
+name = "Lisa"
+
+
 @myobj.route("/", methods=["POST", "GET"])
 def home():
-    city_names = ["Paris", "London", "Rome", "Tahiti"]
-    name = "Lisa"
+
     form = LoginForm()
     if form.validate_on_submit():
         flash("{}".format(form.cityname.data))

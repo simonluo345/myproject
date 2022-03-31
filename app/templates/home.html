@@ -1,25 +1,35 @@
 
 <html>
 <head>
-    <ul>{% with messages = get_flashed_messages() %}
-        {% for i in range(messages|length) %}
-                <li>{{ messages[i] }}</li>
-        {% endfor %}
-        {% endwith %}
-    </ul>
     <title> homepage </title>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
     <h1>Welcome{{name}}!</h1>
 </head>
 <body>
 
     <a href="www.google.com"> not google </a>
-    <ul> {% for i in range(city|length) %}
-         <li> {{ city[i] }} </li>
-         {% endfor %}
+    <ul>
+        {% for i in city %}
+        <li>{{ i }}</li>
+        {% endfor %}
     </ul>
     <form action="" method="post">
-        <p><input type="text" name="nm" maxlength="32"/></p>
-        <p><input type="submit"/></p>
+    {{ form.hidden_tag() }}
+    <p>
+    {{ form.cityname.label }}<br>
+    {{ form.cityname(size=32) }}
+    </p>
+    <p>
+    {{ form.submit() }}
+    </p>
     </form>
 
 </body>

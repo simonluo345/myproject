@@ -1,12 +1,13 @@
 from flask import Flask
 
 myapp = Flask(__name__)
+name = "Lisa"
+city_names = ["Paris", "London", "Rome", "Tahiti"]
 
 
 @myapp.route("/")
 def home():
-    name = "Lisa"
-    city_names = ["Paris", "London", "Rome", "Tahiti"]
+
     city_list = ""
 
     for city in city_names:

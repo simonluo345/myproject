@@ -1,17 +1,17 @@
 
 <html>
 <head>
-    <title> {% block title %} {% endblock %} </title>
-</head>
-<body>
-
     <ul>{% with messages = get_flashed_messages() %}
         {% for i in range(messages|length) %}
                 <li>{{ messages[i] }}</li>
         {% endfor %}
         {% endwith %}
     </ul>
+    <title> homepage </title>
     <h1> Welcome{{ name }} </h1>
+</head>
+<body>
+
     <a href="www.google.com"> not google </a>
     <ul> {% for i in range(city|length) %}
          <li> {{ city[i] }} </li>
